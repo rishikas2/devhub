@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Cafe Aroma</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <style>
+        * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
+    background-image: url("bgabt.jpg");
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-position: center;
+}
+
+body {
+    font-family: "Cormorant Garamond";
+    font-weight: 500;
+    color: #fff; 
+}
+
+header {
+    font-size: large;
+    background-color: rgba(0, 0, 0, 0.448);
+    padding: 10px;
+}
+
+h1 {
+    font-family: "Dancing Script", cursive;
+    text-align: center;
+    color: #fee7c5;
+}
+
+h2 {
+    font-variant: small-caps;
+    color: rgb(254 231 197);
+    text-align: center;
+    margin: 20px 0;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0; 
+    }
+    to {
+        transform: translateX(0); 
+        opacity: 1; 
+    }
+}
+
+.container {
+    padding: 20px;
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.5); 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: slideIn 2s ease-out;
+    animation-fill-mode: forwards;
+    margin-bottom: 70px;
+}
+
+main {
+    margin: 30px 0;
+}
+
+.footer {
+    padding: 10px;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    border: 5px solid black;
+    border-top: 2px solid white;
+    color: aliceblue;
+    background-color: rgba(0, 0, 0, 0.999);
+}
+
+footer img {
+    width: 24px;
+    height: 20px;
+    margin-left: 10px;
+    border-radius: 20%;
+}
+
+a {
+    text-align: left;
+    text-decoration: none;
+    color: white;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Cafe Aroma</h1>
+    </header>
+    <main>
+        <div class="container">
+            <h2>Our History</h2>
+            <p>Cafe Aroma was founded in 2020 with a simple mission: to provide a cozy and welcoming environment where people can come together over great coffee and delicious food. Inspired by the rich coffee culture around the world, our founders traveled to various countries, tasting different brews and learning from local experts. This journey led to the creation of our diverse menu, featuring exceptional coffee sourced from sustainable farms and a range of delightful culinary offerings.</p>
+            
+            <h2>Our Founder</h2>
+            <p>Our founder, Jane Doe, is a passionate coffee enthusiast with over a decade of experience in the food and beverage industry. After realizing her dream of opening a cafe, she dedicated herself to creating a space that emphasizes quality, sustainability, and community. Jane believes in building relationships with local farmers and suppliers to ensure that every cup of coffee served at Cafe Aroma tells a story. Her vision has transformed Cafe Aroma into a beloved spot for locals and visitors alike.</p>
+        </div>
+    </main>
+    <footer class="footer">
+        <p>
+            Visit our socials: <a href="https://instagram.com"><img src="ig.jpg" alt="Instagram"></a><a href="https://youtube.com"><img src="youtube.jpg" alt="Youtube"></a><a href="https://twitter.com"><img src="twitter.jpg" alt="Twitter"></a>
+        </p>
+        <p>&copy;2024 Cafe Aroma. All rights reserved.</p>
+        <ul type="none">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu2.html">Menu</a></li>
+            <li><a href="aboutpg.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </footer>
+</body>
+</html>
