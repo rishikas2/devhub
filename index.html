@@ -21,7 +21,7 @@
         body{
             background-image: url("https://i.pinimg.com/originals/3d/7d/b3/3d7db326007e5dc25023b62ee5a1906d.jpg");
             height: 100vh;
-            width: 100%;
+            width: 100vw;
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -41,12 +41,13 @@
         header{
             font-size:x-large;
             border: 6px;
-            width: 100vw;
+            border-width: 100vw;
             background-color: rgba(0, 0, 0, 0.348);
             width:100%;
         }
         .hero{
             display: grid;
+            font-size: xx-large;
             grid-template-columns: repeat(2, 1fr);
             gap: 1px;
             padding: 0 20px;
@@ -59,8 +60,13 @@
             justify-items: end;
         }
         button{
-            border-color: rgb(229, 118 ,108);
-            background-color:rgb(229, 118 ,108,)
+            border-color: rgba(229, 118, 108, 0.153);
+            background-color:rgba(229, 118, 108, 0.312);
+            padding: 15px 15px;
+            font-size: 18px;
+            text-align: center;
+            width: 150px;
+            height: 50px;
         }
         button:hover {
         border: 5px solid rgb(229, 118 ,108);
@@ -70,33 +76,35 @@
         transform: translateY(-5px);
 }
         .main{
-            padding-bottom: 100px;
-            padding-top: 75px;
+            padding-bottom: 70px;
+            padding-top: 70px;
             display: grid;
+            font-size: large;
             grid-template-columns: auto;
-            grid-template-rows: repeat(4,auto-fit);
+            grid-template-rows: repeat(4,auto);
             justify-items: center;
             text-align: center;
             animation: slideIn 1s ease-out;
             animation-fill-mode: forwards;
 
         }
-        @media (max-width: 768px) {
+        @media (max-width: 800px) {
             .gridcont {
                 
                 grid-template-columns: repeat(2, 1fr); 
             }
         }
 
-        @media (max-width: 480px) {
+        @media (max-width: 500px) {
             .hero {
                 grid-template-columns: 1fr;
                 grid-template-rows: repeat(2,1fr);
+                justify-content: center;
             }
             .gridcont {
                 font-size:medium;
                 grid-template-columns: repeat(4, 1fr); 
-                justify-items: start;
+                justify-content: center;
             }
             h1{
                 text-align: center;
@@ -130,11 +138,14 @@
         .footer{
             padding: 10px;
             display: grid;
+            position: absolute;
+            bottom:0;
             grid-template-rows: repeat(2,1fr);
             border: 5px solid black;
             border-top:2px solid white;
             color:aliceblue;
             background-color:rgba(0, 0, 0, 0.999);
+            width: 100vw;
         }
         a{
             text-decoration: none;
@@ -176,10 +187,10 @@
         </p>
         <p>&copy;2024 Cafe Aroma. All rights reserved.</p>
         <ul type="none">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="menu2.html">Menu</a></li>
-            <li><a href="aboutpg.html">About Us</a></li>
-            <li><a href="#">Contact Us</a></li>
+            <div><a href="index.html">Home</a></div>
+            <div><a href="menu2.html">Menu</a></div>
+            <div><a href="aboutpg.html">About Us</a></div>
+            <div><a href="contact.html">Contact Us</a></div>
         </ul>
     </footer>
     
