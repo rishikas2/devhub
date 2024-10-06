@@ -7,158 +7,164 @@
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
     <style>
-        *{
+        * {
             box-sizing: border-box;
             padding: 0;
             margin: 0;
+        }
 
-        }
         html, body {
-            height: 100%;
-            margin: 0;
-            padding: 0;
-        }
-        body{
             background-image: url("https://i.pinimg.com/originals/3d/7d/b3/3d7db326007e5dc25023b62ee5a1906d.jpg");
-            height: 100vh;
-            width: 100vw;
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            font-family:"Cormorant Garamond" ;
-            font-weight:500;
-        }
-        h1{
-            font-family: Dancing Script, cursive;
+            height: 100vh;
+            width: 100vw;
             color: #fee7c5;
         }
-        h2{
+
+        body {
+            font-family: "Cormorant Garamond";
+            font-weight: 500;
+        }
+
+        h1 {
+            font-family: 'Dancing Script', cursive;
+            /* color: #fee7c5; */
+        }
+
+        h2 {
             font-variant: small-caps;
-            color: rgb(254 231 197);
+            /* color: rgb(254, 231, 197); */
             margin-right: 100px;
             justify-self: end;
         }
-        header{
-            font-size:x-large;
-            border: 6px;
-            border-width: 100vw;
-            background-color: rgba(0, 0, 0, 0.348);
-            width:100%;
+
+        header {
+            font-size: x-large;
+            background-color: rgba(0, 0, 0, 0.337);
+            width: 100vw;
         }
-        .hero{
+
+        .hero {
             display: grid;
-            font-size: xx-large;
             grid-template-columns: repeat(2, 1fr);
             gap: 1px;
-            padding: 0 20px;
+            padding: 20px;
         }
-        .gridcont{
+
+        .gridcont {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 1px;
             margin-top: 10px;
             justify-items: end;
         }
-        button{
-            border-color: rgba(229, 118, 108, 0.153);
-            background-color:rgba(229, 118, 108, 0.312);
-            padding: 15px 15px;
-            font-size: 18px;
+
+        button {
+            border: 2px solid rgba(229, 118, 108, 0.5);
+            background-color: rgba(229, 118, 108, 0.312);
+            color: #fee7c5;
+            padding: 7px 7px;
+            font-family: "Cormorant Garamond";
+            font-weight: bold;
+            font-size: 17px;
             text-align: center;
-            width: 150px;
-            height: 50px;
+            width: 100px;
+            height: 45px;
+            transition: all 0.3s ease;
         }
+
         button:hover {
-        border: 5px solid rgb(229, 118 ,108);
-        background-color: rgb(229, 118 ,108); 
-        color: white; 
-        border-color: white; 
-        transform: translateY(-5px);
-}
-        .main{
-            padding-bottom: 70px;
+            border: 2px solid white;
+            background-color: rgb(229, 118, 108);
+            color: white;
+            transform: translateY(-5px);
+        }
+
+        .main {
             padding-top: 70px;
             display: grid;
             font-size: large;
             grid-template-columns: auto;
-            grid-template-rows: repeat(4,auto);
-            justify-items: center;
             text-align: center;
             animation: slideIn 1s ease-out;
-            animation-fill-mode: forwards;
-
         }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        span {
+            display: grid;
+            justify-self: end;
+            color: rgb(254, 231, 197);
+            background-color: rgba(27, 22, 22, 0.36);
+            border-radius: 20px;
+            max-width: 500px;
+            padding: 10px;
+            border-style: double;
+            animation: slideIn 2s ease-out;
+        }
+
+        .footer {
+            padding: 10px;
+            display: grid;
+            position: absolute;
+            bottom: 0;
+            grid-template-rows: repeat(2, 1fr);
+            border: 5px solid black;
+            border-top: 2px solid white;
+            color: aliceblue;
+            background-color: rgba(0, 0, 0, 0.999);
+            width: 100vw;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        footer img {
+            width: 24px;
+            height: 20px;
+            margin-left: 10px;
+            border-radius: 20%;
+        }
+
         @media (max-width: 800px) {
             .gridcont {
-                
-                grid-template-columns: repeat(2, 1fr); 
+                grid-template-columns: repeat(2, 1fr);
+                justify-content: center;
             }
         }
 
         @media (max-width: 500px) {
             .hero {
                 grid-template-columns: 1fr;
-                grid-template-rows: repeat(2,1fr);
                 justify-content: center;
             }
+
             .gridcont {
-                font-size:medium;
-                grid-template-columns: repeat(4, 1fr); 
+                grid-template-columns: repeat(4,1fr);
+                grid-template-rows: 1fr;
                 justify-content: center;
             }
-            h1{
+
+            h1 {
                 text-align: center;
             }
-        }
-        @keyframes slideIn {
-        from {
-        transform: translateY(-100%);
-        opacity: 0; 
-        }
-        to {
-        transform: translateY(0); 
-        opacity: 1; 
-        }
+            .main{
+                justify-content: center;
+            }
     }
-        
-        span
-        {
-            display: grid;
-            justify-self: end;
-            border: 5px;
-            color: rgb(254 231 197);
-            background-color: rgb(27 22 22 / 36%);
-            border-radius: 20px;
-            max-width: 500px; 
-            padding: 10px;
-            border-style: double;
-            animation: slideIn 2s ease-out;
-            animation-fill-mode: forwards;
-        }
-        .footer{
-            padding: 10px;
-            display: grid;
-            position: absolute;
-            bottom:0;
-            grid-template-rows: repeat(2,1fr);
-            border: 5px solid black;
-            border-top:2px solid white;
-            color:aliceblue;
-            background-color:rgba(0, 0, 0, 0.999);
-            width: 100vw;
-        }
-        a{
-            text-decoration: none;
-            color:white
-        }
-        footer img{
-            width: 24px;
-            height: 20px;
-            margin-left: 10px;
-            margin-left: 10px;
-            border-radius: 20%;
-            
-        }
     </style>
 </head>
 <body>
@@ -177,15 +183,20 @@
         <div class="main">
             <h2>Welcome to Cafe Aroma!</h2>
             <br>
-            <span><p>At Cafe Aroma, we believe in serving exceptional coffee and delicious food that bring people together. Located in the heart of the city, our cafe is your perfect spot to relax and unwind.</p>
-            <p>Enjoy a rich selection of coffees made from carefully sourced beans, expertly brewed by our skilled baristas. Pair your drink with our mouthwatering menu, featuring everything from hearty breakfasts and savory sandwiches to delightful pastries.</p>Join us at Cafe Aroma, where the inviting aroma of freshly brewed coffee and the warmth of delicious food create a welcoming atmosphere. We can't wait to serve you!</span>
+            <span>
+                <p>At Cafe Aroma, we believe in serving exceptional coffee and delicious food that bring people together. Located in the heart of the city, our cafe is your perfect spot to relax and unwind.</p>
+                <p>Enjoy a rich selection of coffees made from carefully sourced beans, expertly brewed by our skilled baristas. Pair your drink with our mouthwatering menu, featuring everything from hearty breakfasts and savory sandwiches to delightful pastries.</p>
+                Join us at Cafe Aroma, where the inviting aroma of freshly brewed coffee and the warmth of delicious food create a welcoming atmosphere. We can't wait to serve you!
+            </span>
         </div>
     </main>
     <footer class="footer">
-        <p>
-            Visit our socials: <a href="https://instagram.com"><img src="ig.jpg" alt="Instagram"></a><a href="https://youtube.com"><img src="youtube.jpg" alt="Youtube"></a><a href="https://twitter.com"><img src="twitter.jpg" alt="Twitter"></a>
+        <p>Visit our socials:
+            <a href="https://instagram.com"><img src="ig.jpg" alt="Follow us on Instagram"></a>
+            <a href="https://youtube.com"><img src="youtube.jpg" alt="Visit our YouTube channel"></a>
+            <a href="https://twitter.com"><img src="twitter.jpg" alt="Follow us on Twitter"></a>
         </p>
-        <p>&copy;2024 Cafe Aroma. All rights reserved.</p>
+        <p>&copy; 2024 Cafe Aroma. All rights reserved.</p>
         <ul type="none">
             <div><a href="index.html">Home</a></div>
             <div><a href="menu2.html">Menu</a></div>
@@ -193,6 +204,5 @@
             <div><a href="contact.html">Contact Us</a></div>
         </ul>
     </footer>
-    
 </body>
 </html>
