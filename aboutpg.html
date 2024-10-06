@@ -60,15 +60,15 @@ h2 {
 
 .container {
     padding: 20px;
-    max-width: 700px;
-    margin: 0 auto;
+    max-width: 800px;
+    margin:0 auto;
     background-color: rgba(0, 0, 0, 0.5); 
     border-radius: 10px;
     font-size: large;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     animation: slideIn 2s ease-out;
     animation-fill-mode: forwards;
-    margin-bottom: 70px;
+    margin-bottom: 10px;
 }
 
 main {
@@ -93,6 +93,29 @@ footer img {
     height: 20px;
     margin-left: 10px;
     border-radius: 20%;
+}
+@media (max-width: 800px) 
+{
+    h2{
+        font-size: large;
+    }
+    .container{
+        width:fit-content;
+        padding:5px;
+        font-size: large;
+    }         
+}
+
+@media (max-width: 500px) 
+{
+    header{
+        font-size: large;
+    }
+    .container{
+        width:fit-content;
+        padding:5px;
+        font-size: medium;
+    }     
 }
 
 a {
